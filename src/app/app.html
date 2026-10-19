@@ -1,4 +1,8 @@
 
+<!-- =========================================
+     EXPEDIÇÃO EGITO 2027
+     APP.HTML COMPLETO
+========================================= -->
 
 <header
   class="header"
@@ -23,6 +27,8 @@
     <a href="#roteiro" (click)="closeMenu()">Roteiro</a>
     <a href="#experiencias" (click)="closeMenu()">Experiências</a>
     <a href="#informacoes" (click)="closeMenu()">Informações</a>
+    <a href="#investimento" (click)="closeMenu()">Investimento</a>
+    <a href="#organizacao" (click)="closeMenu()">Organização</a>
     <a href="#duvidas" (click)="closeMenu()">Dúvidas</a>
   </nav>
 
@@ -35,8 +41,8 @@
     class="menu-toggle"
     [class.active]="menuOpen()"
     [attr.aria-expanded]="menuOpen()"
-    aria-controls="main-navigation"
     [attr.aria-label]="menuOpen() ? 'Fechar menu' : 'Abrir menu'"
+    aria-controls="main-navigation"
     (click)="toggleMenu()"
   >
     <span></span>
@@ -45,297 +51,536 @@
   </button>
 </header>
 
-
 <main>
+
+  <!-- =========================================
+       01. HERO
+  ========================================= -->
+
   <section class="hero" id="inicio">
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
-      <span class="eyebrow">UMA JORNADA EXTRAORDINÁRIA</span>
+      <span class="eyebrow">
+        12 A 23 DE ABRIL DE 2027
+      </span>
 
       <h1>
         EXPEDIÇÃO
         <span>EGITO</span>
       </h1>
 
-      <p class="hero-subtitle">Uma viagem no tempo</p>
+      <p class="hero-subtitle">
+        Uma viagem no tempo
+      </p>
 
       <div class="hero-details">
-        <span>9 DIAS</span>
-        <span>8 NOITES</span>
+        <span>VIAGEM EM GRUPO</span>
         <span>HISTÓRIA</span>
         <span>CULTURA</span>
         <span>AVENTURA</span>
       </div>
 
       <p class="hero-description">
-        Descubra os mistérios de uma das civilizações mais fascinantes
-        do mundo. Uma expedição entre pirâmides, templos milenares
-        e experiências inesquecíveis.
+        Uma expedição inesquecível pelas maravilhas do Egito.
+        Conheça pirâmides milenares, templos monumentais,
+        navegue pelo Rio Nilo e descubra paisagens
+        surpreendentes do Mar Vermelho.
       </p>
 
-      <a class="hero-button" href="#contato">
-        QUERO VIVER ESSA EXPEDIÇÃO
+      <a href="#informacoes" class="hero-button">
+        QUERO PARTICIPAR DA EXPEDIÇÃO
         <span>→</span>
       </a>
     </div>
 
-    <a class="scroll-indicator" href="#destinos">
+    <a href="#destinos" class="scroll-indicator">
       <span>EXPLORE A EXPEDIÇÃO</span>
       <span class="scroll-arrow">↓</span>
     </a>
   </section>
 
+  <!-- =========================================
+       02. DESTINOS
+  ========================================= -->
+
   
+<!-- =========================================
+     DESTINOS — FOTOGRAFIAS REAIS
+========================================= -->
+
 <section class="destinations-section" id="destinos">
+
   <div class="section-heading">
     <div>
       <span class="eyebrow">DESTINOS INCRÍVEIS</span>
+
       <h2>Lugares que contam histórias</h2>
     </div>
 
     <p>
-      Do mistério das pirâmides às águas tranquilas do Nilo,
-      cada destino é um capítulo inesquecível.
+      Das pirâmides milenares às águas cristalinas
+      do Mar Vermelho, descubra os destinos que
+      fazem desta expedição uma experiência única.
     </p>
   </div>
 
   <div class="destinations-grid">
+
+    <!-- 01. CAIRO E GIZÉ -->
     <a class="destination-card" href="#roteiro">
+
       <img
-        src="https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=900&q=85"
-        alt="Pirâmides de Gizé, no Egito"
+        src="destinos/cairo-gize.jpg"
+        alt="Pirâmides e Esfinge de Gizé, no Egito"
         loading="lazy"
+        decoding="async"
       />
+
       <div class="destination-content">
         <h3>Cairo e Gizé</h3>
-        <p>Pirâmides, Esfinge e Museu Egípcio.</p>
+
+        <p>
+          Pirâmides, Esfinge, Grande Museu Egípcio
+          e as maravilhas do Egito Antigo.
+        </p>
+
         <span class="card-arrow">→</span>
       </div>
+
     </a>
 
+    <!-- 02. ASWAN E PHILAE -->
     <a class="destination-card" href="#roteiro">
+
       <img
-        src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?auto=format&fit=crop&w=900&q=85"
-        alt="Arquitetura histórica do Egito"
+        src="destinos/aswan-philae.jpg"
+        alt="Templo de Philae, em Aswan, no Egito"
         loading="lazy"
+        decoding="async"
       />
+
+      <div class="destination-content">
+        <h3>Aswan e Philae</h3>
+
+        <p>
+          Templo de Philae, paisagens do Rio Nilo
+          e monumentos fascinantes.
+        </p>
+
+        <span class="card-arrow">→</span>
+      </div>
+
+    </a>
+
+    <!-- 03. CRUZEIRO PELO NILO -->
+    <a class="destination-card" href="#roteiro">
+
+      <img
+        src="destinos/cruzeiro-nilo.jpg"
+        alt="Embarcação de cruzeiro no Rio Nilo, no Egito"
+        loading="lazy"
+        decoding="async"
+      />
+
+      <div class="destination-content">
+        <h3>Cruzeiro pelo Nilo</h3>
+
+        <p>
+          Uma jornada pelas águas do rio,
+          com paisagens e templos históricos.
+        </p>
+
+        <span class="card-arrow">→</span>
+      </div>
+
+    </a>
+
+    <!-- 04. ABU SIMBEL -->
+    <a class="destination-card" href="#roteiro">
+
+      <img
+        src="destinos/abu-simbel.jpg"
+        alt="Grande Templo de Ramsés II, em Abu Simbel"
+        loading="lazy"
+        decoding="async"
+      />
+
+      <div class="destination-content">
+        <span class="destination-tag">
+          PASSEIO OPCIONAL
+        </span>
+
+        <h3>Abu Simbel</h3>
+
+        <p>
+          Conheça os impressionantes templos
+          de Ramsés II e sua história milenar.
+        </p>
+
+        <span class="card-arrow">→</span>
+      </div>
+
+    </a>
+
+    <!-- 05. LUXOR E KARNAK -->
+    <a class="destination-card" href="#roteiro">
+
+      <img
+        src="destinos/luxor-karnak.jpg"
+        alt="Colunas monumentais do Templo de Karnak, em Luxor"
+        loading="lazy"
+        decoding="async"
+      />
+
       <div class="destination-content">
         <h3>Luxor e Karnak</h3>
-        <p>Templos monumentais e colunas impressionantes.</p>
+
+        <p>
+          Templos monumentais, Vale dos Reis
+          e o legado dos faraós.
+        </p>
+
         <span class="card-arrow">→</span>
       </div>
+
     </a>
 
+    <!-- 06. HURGHADA -->
     <a class="destination-card" href="#roteiro">
+
       <img
-        src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=900&q=85"
-        alt="Paisagem histórica do Egito"
+        src="destinos/hurghada.jpg"
+        alt="Resort em Hurghada, no Mar Vermelho, Egito"
         loading="lazy"
+        decoding="async"
       />
+
       <div class="destination-content">
-        <h3>Vale dos Reis</h3>
-        <p>Tumbas reais e milhares de anos de história.</p>
+        <h3>Hurghada — Mar Vermelho</h3>
+
+        <p>
+          Praia, descanso e uma estadia
+          em resort all inclusive.
+        </p>
+
         <span class="card-arrow">→</span>
       </div>
+
     </a>
 
-    <a class="destination-card" href="#roteiro">
-      <img
-        src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?auto=format&fit=crop&w=900&q=85"
-        alt="Paisagens do Egito"
-        loading="lazy"
-      />
-      <div class="destination-content">
-        <h3>Aswan e Rio Nilo</h3>
-        <p>Passeios de feluca e paisagens inesquecíveis.</p>
-        <span class="card-arrow">→</span>
-      </div>
-    </a>
   </div>
+
+  <p class="destinations-note">
+    Fotografias ilustrativas dos destinos.
+    Os hotéis e passeios específicos seguem
+    as condições da expedição.
+  </p>
+
 </section>
 
 
-  
-<section class="itinerary-section" id="roteiro">
-  <div class="itinerary-container">
+  <!-- =========================================
+       03. ROTEIRO INTERATIVO
+  ========================================= -->
 
-    <div class="itinerary-intro">
-      <span class="eyebrow">ROTEIRO COMPLETO</span>
+  <section class="itinerary-section" id="roteiro">
 
-      <h2>
-        9 DIAS
-        <span>8 NOITES</span>
-      </h2>
+    <div class="itinerary-container">
 
-      <p>
-        Uma viagem pela história do Egito, passando
-        por pirâmides, templos milenares e paisagens
-        inesquecíveis.
-      </p>
+      <div class="itinerary-intro">
+        <span class="eyebrow">ROTEIRO COMPLETO</span>
 
-      <div class="itinerary-line"></div>
+        <h2>
+          EGITO
+          <span>2027</span>
+        </h2>
 
-      <span class="itinerary-note">
-        Explore os dias da nossa expedição
-      </span>
-    </div>
+        <p class="itinerary-date">
+          12 A 23 DE ABRIL DE 2027
+        </p>
 
-    <div class="itinerary-main">
-      <div class="days-selector">
-        @for (item of itinerary; track item.day) {
-          <button
-            type="button"
-            class="day-button"
-            [class.active]="selectedDay() === item.day"
-            [attr.aria-pressed]="selectedDay() === item.day"
-            (click)="selectDay(item.day)"
-          >
-            <span class="day-number">
-              {{ item.day }}
-            </span>
-            <span class="day-label">
-              DIA {{ item.day }}
-            </span>
-          </button>
-        }
+        <p>
+          Uma jornada pela história do Egito,
+          passando pelas Pirâmides de Gizé,
+          templos milenares, cruzeiro pelo Rio Nilo
+          e paisagens do Mar Vermelho.
+        </p>
+
+        <div class="itinerary-line"></div>
+
+        <span class="itinerary-note">
+          Explore cada etapa da nossa expedição.
+        </span>
       </div>
 
-      <div class="day-details">
-        <div class="day-image">
-          <img
-            [src]="activeDay.image"
-            [alt]="activeDay.title"
-          />
-          <span class="image-day">
-            DIA {{ activeDay.day }} DE 9
-          </span>
-        </div>
+      <div class="itinerary-main">
 
-        <div class="day-information">
-          <span class="eyebrow">
-            SUA JORNADA PELO EGITO
-          </span>
-
-          <h3>{{ activeDay.title }}</h3>
-
-          <p>{{ activeDay.description }}</p>
-
-          <div class="day-highlights">
-            @for (highlight of activeDay.highlights; track highlight) {
-              <span>{{ highlight }}</span>
-            }
-          </div>
-
-          <div class="day-navigation">
+        <div
+          class="days-selector"
+          role="group"
+          aria-label="Selecione uma etapa do roteiro"
+        >
+          @for (item of itinerary; track item.day) {
             <button
               type="button"
-              (click)="previousDay()"
-              aria-label="Dia anterior"
+              class="day-button"
+              [class.active]="selectedDay() === item.day"
+              [attr.aria-pressed]="selectedDay() === item.day"
+              (click)="selectDay(item.day)"
             >
-              ←
+              <span class="day-number">
+                {{ item.day === 0 ? '00' : item.day }}
+              </span>
+              <span class="day-label">
+                DIA {{ item.day === 0 ? '00' : item.day }}
+              </span>
             </button>
+          }
+        </div>
 
-            <span>
-              {{ activeDay.day }} / 9
+        <div class="day-details">
+
+          <div class="day-image">
+            <img
+              [src]="activeDay.image"
+              [alt]="activeDay.title"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="image-day">
+              DIA {{ activeDay.day === 0 ? '00' : activeDay.day }}
+            </span>
+          </div>
+
+          <div class="day-information">
+            <span class="eyebrow">
+              SUA JORNADA PELO EGITO
             </span>
 
-            <button
-              type="button"
-              (click)="nextDay()"
-              aria-label="Próximo dia"
-            >
-              →
-            </button>
+            <h3>{{ activeDay.title }}</h3>
+            <p>{{ activeDay.description }}</p>
+
+            <div class="day-highlights">
+              @for (highlight of activeDay.highlights; track highlight) {
+                <span>{{ highlight }}</span>
+              }
+            </div>
+
+            <div class="day-navigation">
+              <button
+                type="button"
+                aria-label="Dia anterior"
+                (click)="previousDay()"
+              >
+                ←
+              </button>
+
+              <span>
+                {{ activeDay.day === 0 ? '00' : activeDay.day }} / 13
+              </span>
+
+              <button
+                type="button"
+                aria-label="Próximo dia"
+                (click)="nextDay()"
+              >
+                →
+              </button>
+            </div>
           </div>
+
+        </div>
+
+        <p class="itinerary-disclaimer">
+          A programação segue a numeração original
+          do material comercial, do Dia 00 ao Dia 13.
+          As datas individuais deverão ser confirmadas
+          pela organização.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       04. SERVIÇOS INCLUÍDOS
+  ========================================= -->
+
+  <section class="included-section" id="incluso">
+
+    <div class="included-container">
+
+      <div class="included-heading">
+        <span class="eyebrow">
+          SUA EXPERIÊNCIA PELO EGITO
+        </span>
+        <h2>O QUE ESTÁ INCLUÍDO</h2>
+        <p>
+          Uma jornada com hospedagens, transportes,
+          passeios e acompanhamento organizados
+          para você aproveitar o melhor do Egito.
+        </p>
+      </div>
+
+      <div class="included-grid">
+
+        <article class="included-card">
+          <div class="included-icon">⌂</div>
+          <h3>Hospedagem</h3>
+          <p>
+            Hospedagens conforme a programação,
+            cruzeiro pelo Rio Nilo e resort
+            all inclusive em Hurghada.
+          </p>
+        </article>
+
+        <article class="included-card">
+          <div class="included-icon">✈</div>
+          <h3>Transportes</h3>
+          <p>
+            Traslados previstos no roteiro,
+            transporte climatizado e voo interno
+            entre Cairo e Aswan.
+          </p>
+        </article>
+
+        <article class="included-card">
+          <div class="included-icon">▣</div>
+          <h3>Passeios e ingressos</h3>
+          <p>
+            Visitas e ingressos previstos
+            na programação, incluindo pirâmides,
+            museus e templos históricos.
+          </p>
+        </article>
+
+        <article class="included-card">
+          <div class="included-icon">♙</div>
+          <h3>Guia em português</h3>
+          <p>
+            Acompanhamento de guia egiptólogo
+            que fala português durante as
+            visitas programadas.
+          </p>
+        </article>
+
+        <article class="included-card">
+          <div class="included-icon">◇</div>
+          <h3>Refeições</h3>
+          <p>
+            Cafés da manhã, refeições indicadas
+            na programação e regime all inclusive
+            no resort de Hurghada.
+          </p>
+        </article>
+
+        <article class="included-card">
+          <div class="included-icon">✦</div>
+          <h3>Recepção no Egito</h3>
+          <p>
+            Recepção no aeroporto e assistência
+            nos procedimentos de chegada,
+            incluindo visto e alfândega.
+          </p>
+        </article>
+
+        <article class="included-card">
+          <div class="included-icon">◈</div>
+          <h3>Preparação da viagem</h3>
+          <p>
+            Encontro informativo online e
+            acesso aos grupos de viajantes
+            no WhatsApp e Facebook.
+          </p>
+        </article>
+
+        <article class="included-card">
+          <div class="included-icon">♧</div>
+          <h3>Kit da expedição</h3>
+          <p>
+            Kit Mala Prática (KMP),
+            conforme a apresentação comercial.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="not-included">
+
+        <div class="not-included-heading">
+          <span class="eyebrow">INFORMAÇÕES IMPORTANTES</span>
+          <h3>O QUE NÃO ESTÁ INCLUÍDO</h3>
+          <p>
+            Alguns custos e experiências
+            são contratados separadamente.
+          </p>
+        </div>
+
+        <div class="not-included-grid">
+
+          <article class="not-included-item">
+            <span class="not-included-symbol">×</span>
+            <div>
+              <h4>Passagens internacionais</h4>
+              <p>
+                Voos de ida e volta
+                entre o Brasil e o Cairo.
+              </p>
+            </div>
+          </article>
+
+          <article class="not-included-item">
+            <span class="not-included-symbol">×</span>
+            <div>
+              <h4>Visto para o Egito</h4>
+              <p>
+                Taxa de US$ 30, conforme
+                a apresentação comercial.
+              </p>
+            </div>
+          </article>
+
+          <article class="not-included-item">
+            <span class="not-included-symbol">×</span>
+            <div>
+              <h4>Despesas extras</h4>
+              <p>
+                Refeições, bebidas e serviços
+                não especificados como incluídos.
+              </p>
+            </div>
+          </article>
+
+          <article class="not-included-item">
+            <span class="not-included-symbol">×</span>
+            <div>
+              <h4>Passeios opcionais</h4>
+              <p>
+                Saqqara, Abu Simbel, Vila Núbia,
+                passeio de balão e passeio
+                de barco no Mar Vermelho.
+              </p>
+            </div>
+          </article>
+
         </div>
       </div>
-    </div>
 
-  </div>
-</section>
-
-
-  
-<!-- =========================================
-     O QUE ESTÁ INCLUSO
-========================================= -->
-<section class="included-section" id="incluso">
-  <div class="included-container">
-
-    <div class="included-heading">
-      <span class="eyebrow">O QUE ESTÁ INCLUSO</span>
-
-      <h2>UMA VIAGEM SEM PREOCUPAÇÕES</h2>
-
-      <p>
-        Cada detalhe pensado para que você aproveite
-        uma experiência inesquecível pelo Egito.
-      </p>
-    </div>
-
-    <div class="included-grid">
-
-      <div class="included-card">
-        <div class="included-icon">⌂</div>
-        <h3>Hospedagem</h3>
-        <p>
-          Hotéis selecionados para oferecer conforto
-          durante a expedição.
-        </p>
-      </div>
-
-      <div class="included-card">
-        <div class="included-icon">✈</div>
-        <h3>Traslados</h3>
-        <p>
-          Deslocamentos organizados entre aeroportos,
-          hotéis e destinos.
-        </p>
-      </div>
-
-      <div class="included-card">
-        <div class="included-icon">▣</div>
-        <h3>Passeios</h3>
-        <p>
-          Visitas aos principais monumentos
-          e atrações do roteiro.
-        </p>
-      </div>
-
-      <div class="included-card">
-        <div class="included-icon">♙</div>
-        <h3>Acompanhamento</h3>
-        <p>
-          Orientação durante a jornada
-          e visitas programadas.
-        </p>
-      </div>
-
-      <div class="included-card">
-        <div class="included-icon">◇</div>
-        <h3>Suporte</h3>
-        <p>
-          Informações e assistência
-          para aproveitar a viagem.
-        </p>
+      <div class="included-notice">
+        Os serviços seguem a apresentação comercial
+        da Expedição Egito 2027. Consulte as condições
+        oficiais antes da contratação.
       </div>
 
     </div>
-
-    <div class="included-notice">
-      Os serviços e benefícios apresentados são
-      preliminares e sujeitos à confirmação da
-      agência organizadora.
-    </div>
-
-  </div>
-</section>
+  </section>
 
 
 <!-- =========================================
-     EXPERIÊNCIAS INCRÍVEIS
+     EXPERIÊNCIAS — EGITO 2027
 ========================================= -->
+
 <section class="experiences-section" id="experiencias">
 
   <div class="experiences-container">
@@ -359,457 +604,831 @@
 
     <div class="experiences-grid">
 
+      <!-- 01. PASSEIO DE FELUCA -->
       <article class="experience-card">
+
         <img
-          src="https://images.unsplash.com/photo-1553913861-c0fddf2619ee?auto=format&fit=crop&w=900&q=85"
-          alt="Paisagem do Egito"
+          src="experiencias/passeio-feluca.webp"
+          alt="Ilustração de passeio de feluca no Rio Nilo"
           loading="lazy"
+          decoding="async"
+          width="480"
+          height="600"
         />
 
         <div class="experience-overlay"></div>
 
         <div class="experience-content">
           <span>01 / RIO NILO</span>
+
           <h3>Passeio de feluca</h3>
+
           <p>
             Uma navegação tranquila pelo rio
             mais famoso do Egito.
           </p>
         </div>
+
       </article>
 
+      <!-- 02. PÔR DO SOL -->
       <article class="experience-card">
+
         <img
-          src="https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=900&q=85"
-          alt="Deserto do Egito"
+          src="experiencias/por-do-sol-deserto.webp"
+          alt="Ilustração de pôr do sol no deserto egípcio"
           loading="lazy"
+          decoding="async"
+          width="480"
+          height="600"
         />
 
         <div class="experience-overlay"></div>
 
         <div class="experience-content">
           <span>02 / DESERTO</span>
+
           <h3>Pôr do sol</h3>
+
           <p>
             As cores do entardecer transformando
             a paisagem do deserto.
           </p>
         </div>
+
       </article>
 
+      <!-- 03. PASSEIO DE CAMELO -->
       <article class="experience-card">
+
         <img
-          src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=900&q=85"
-          alt="Monumentos e paisagens do Egito"
+          src="experiencias/passeio-camelo.webp"
+          alt="Ilustração de camelo próximo às Pirâmides de Gizé"
           loading="lazy"
+          decoding="async"
+          width="480"
+          height="600"
         />
 
         <div class="experience-overlay"></div>
 
         <div class="experience-content">
           <span>03 / AVENTURA</span>
+
           <h3>Passeio de camelo</h3>
+
           <p>
-            A experiência de atravessar as
-            paisagens do deserto.
+            Uma experiência pelas paisagens
+            históricas do Egito.
           </p>
         </div>
+
       </article>
 
+      <!-- 04. KHAN EL KHALILI -->
       <article class="experience-card">
+
         <img
-          src="https://images.unsplash.com/photo-1572252009286-268acec5ca0a?auto=format&fit=crop&w=900&q=85"
-          alt="Cidade do Cairo, no Egito"
+          src="experiencias/khan-el-khalili.webp"
+          alt="Ilustração do mercado Khan el Khalili no Cairo"
           loading="lazy"
+          decoding="async"
+          width="480"
+          height="600"
         />
 
         <div class="experience-overlay"></div>
 
         <div class="experience-content">
           <span>04 / CULTURA</span>
+
           <h3>Khan el Khalili</h3>
+
           <p>
             Um mercado tradicional repleto
             de cores, aromas e histórias.
           </p>
         </div>
+
       </article>
 
+      <!-- 05. GASTRONOMIA -->
       <article class="experience-card">
+
         <img
-          src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85"
-          alt="Experiência gastronômica"
+          src="experiencias/gastronomia-egipcia.webp"
+          alt="Ilustração de pratos tradicionais da culinária egípcia"
           loading="lazy"
+          decoding="async"
+          width="480"
+          height="600"
         />
 
         <div class="experience-overlay"></div>
 
         <div class="experience-content">
           <span>05 / GASTRONOMIA</span>
+
           <h3>Sabores do Egito</h3>
+
           <p>
             Descubra pratos típicos e sabores
             da culinária egípcia.
           </p>
         </div>
+
       </article>
 
     </div>
 
     <p class="experiences-note">
-      Algumas experiências poderão ser opcionais
-      ou depender de contratação adicional.
+      Imagens ilustrativas geradas por inteligência artificial.
+      Algumas atividades são opcionais ou dependem
+      de contratação adicional.
       Consulte as condições da expedição.
     </p>
 
     <div class="experiences-footer">
-      <span>UMA JORNADA QUE VAI ALÉM DO IMAGINÁVEL</span>
+
+      <span>
+        UMA JORNADA QUE VAI ALÉM DO IMAGINÁVEL
+      </span>
+
       <a href="#contato" class="experiences-button">
         TENHO INTERESSE NA EXPEDIÇÃO
         <span>→</span>
       </a>
+
     </div>
 
   </div>
+
 </section>
 
 
- 
-<!-- =========================================
-     PLANEJAMENTO DA VIAGEM
-========================================= -->
+  <!-- =========================================
+       06. INFORMAÇÕES
+  ========================================= -->
 
-<section class="travel-info-section" id="informacoes">
+  <section class="travel-info-section" id="informacoes">
 
-  <div class="travel-info-container">
+    <div class="travel-info-container">
 
-    <div class="travel-info-heading">
-      <span class="eyebrow">PLANEJE SUA JORNADA</span>
-
-      <h2>
-        SUA PRÓXIMA GRANDE
-        <span>AVENTURA COMEÇA AQUI</span>
-      </h2>
-
-      <p>
-        Conheça as principais informações para
-        começar a planejar sua expedição pelo Egito.
-      </p>
-    </div>
-
-    <div class="travel-info-grid">
-
-      <article class="travel-info-card">
-        <span class="info-icon">◷</span>
-        <span class="info-label">DURAÇÃO</span>
-        <h3>9 dias e 8 noites</h3>
+      <div class="travel-info-heading">
+        <span class="eyebrow">PLANEJE SUA JORNADA</span>
+        <h2>
+          SUA PRÓXIMA GRANDE
+          <span>AVENTURA COMEÇA AQUI</span>
+        </h2>
         <p>
-          Uma jornada por alguns dos lugares
-          mais fascinantes do Egito.
+          Conheça as principais informações para
+          começar a planejar sua expedição pelo Egito.
         </p>
-      </article>
-
-      <article class="travel-info-card">
-        <span class="info-icon">☀</span>
-        <span class="info-label">PERÍODO</span>
-        <h3>Data a confirmar</h3>
-        <p>
-          Consulte o próximo período programado
-          para a expedição.
-        </p>
-      </article>
-
-      <article class="travel-info-card">
-        <span class="info-icon">⌂</span>
-        <span class="info-label">HOSPEDAGEM</span>
-        <h3>Hotéis selecionados</h3>
-        <p>
-          Os estabelecimentos e as condições
-          serão informados na proposta oficial.
-        </p>
-      </article>
-
-      <article class="travel-info-card">
-        <span class="info-icon">✈</span>
-        <span class="info-label">TRANSPORTE</span>
-        <h3>Deslocamentos planejados</h3>
-        <p>
-          Informações sobre passagens e traslados
-          conforme o pacote contratado.
-        </p>
-      </article>
-
-      <article class="travel-info-card">
-        <span class="info-icon">♧</span>
-        <span class="info-label">DOCUMENTAÇÃO</span>
-        <h3>Passaporte e visto</h3>
-        <p>
-          Verifique os documentos e os requisitos
-          de entrada antes de viajar.
-        </p>
-      </article>
-
-      <article class="travel-info-card highlight-card">
-        <span class="info-icon">◇</span>
-        <span class="info-label">INVESTIMENTO</span>
-        <h3>Consulte os valores</h3>
-        <p>
-          Solicite informações sobre preços,
-          condições e formas de pagamento.
-        </p>
-
-        <a href="#contato" class="info-link">
-          QUERO SABER MAIS →
-        </a>
-      </article>
-
-    </div>
-
-    <p class="travel-info-disclaimer">
-      Datas, hotéis, serviços, valores e condições
-      estão sujeitos à confirmação da agência
-      responsável pela organização da expedição.
-    </p>
-
-  </div>
-</section>
-
-
-<!-- =========================================
-     AGÊNCIA ORGANIZADORA
-========================================= -->
-
-<section class="organizer-section" id="organizacao">
-
-  <div class="organizer-container">
-
-    <div class="organizer-content">
-      <span class="eyebrow">VIAJE COM INFORMAÇÃO</span>
-
-      <h2>
-        UMA EXPERIÊNCIA
-        <span>BEM PLANEJADA</span>
-      </h2>
-
-      <p>
-        A Expedição Egito é divulgada por meio
-        deste site e organizada por uma agência
-        de viagens parceira.
-      </p>
-
-      <p>
-        Antes da contratação, você poderá
-        consultar as informações da organizadora,
-        as condições comerciais e os serviços
-        previstos para sua viagem.
-      </p>
-
-      <div class="organizer-info">
-        <span>AGÊNCIA RESPONSÁVEL</span>
-        <strong>Informações em atualização</strong>
       </div>
 
-      <a href="#contato" class="organizer-button">
-        CONSULTAR INFORMAÇÕES
-        <span>→</span>
-      </a>
+      <div class="travel-info-grid">
+
+        <article class="travel-info-card">
+          <span class="info-icon">◷</span>
+          <span class="info-label">PROGRAMAÇÃO</span>
+          <h3>Expedição Egito 2027</h3>
+          <p>
+            Roteiro com Cairo, Aswan, cruzeiro
+            pelo Nilo, Luxor e Hurghada.
+          </p>
+        </article>
+
+        <article class="travel-info-card">
+          <span class="info-icon">☀</span>
+          <span class="info-label">PERÍODO</span>
+          <h3>12 a 23 de abril</h3>
+          <p>
+            Datas anunciadas para a expedição de 2027.
+          </p>
+        </article>
+
+        <article class="travel-info-card">
+          <span class="info-icon">⌂</span>
+          <span class="info-label">HOSPEDAGEM</span>
+          <h3>Hotéis e resort</h3>
+          <p>
+            Hospedagem durante o roteiro,
+            com resort all inclusive em Hurghada.
+          </p>
+        </article>
+
+        <article class="travel-info-card">
+          <span class="info-icon">✈</span>
+          <span class="info-label">TRANSPORTE</span>
+          <h3>Deslocamentos planejados</h3>
+          <p>
+            Voo Cairo–Aswan, traslados
+            e cruzeiro pelo Rio Nilo.
+            Voos internacionais não incluídos.
+          </p>
+        </article>
+
+        <article class="travel-info-card">
+          <span class="info-icon">♧</span>
+          <span class="info-label">DOCUMENTAÇÃO</span>
+          <h3>Passaporte e visto</h3>
+          <p>
+            Verifique os documentos e requisitos
+            de entrada no Egito. A taxa do visto
+            não está incluída no pacote.
+          </p>
+        </article>
+
+        <article class="travel-info-card highlight-card">
+          <span class="info-icon">◇</span>
+          <span class="info-label">INVESTIMENTO</span>
+          <h3>A partir de US$ 2.380</h3>
+          <p>
+            Valor por pessoa em quarto duplo,
+            conforme a apresentação comercial.
+          </p>
+          <a href="#investimento" class="info-link">
+            VER VALORES →
+          </a>
+        </article>
+
+      </div>
+
+      <p class="travel-info-disclaimer">
+        Valores em dólares americanos. Pagamentos
+        sujeitos às condições comerciais e à
+        cotação aplicável do dólar turismo.
+      </p>
+
     </div>
+  </section>
 
-    <div class="organizer-image">
-      <img
-        src="https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=1200&q=85"
-        alt="Pirâmides do Egito"
-        loading="lazy"
-      />
-      <div class="organizer-image-overlay"></div>
-      <span>O EGITO ESPERA POR VOCÊ</span>
+  <!-- =========================================
+       07. INVESTIMENTO
+  ========================================= -->
+
+  <section class="investment-section" id="investimento">
+
+    <div class="investment-container">
+
+      <div class="investment-heading">
+        <span class="eyebrow">EXPEDIÇÃO EGITO 2027</span>
+        <h2>
+          INVISTA EM UMA
+          <span>EXPERIÊNCIA INESQUECÍVEL</span>
+        </h2>
+        <p>
+          Descubra as condições para participar de
+          uma jornada pelo Egito, com história,
+          cultura, cruzeiro pelo Nilo
+          e momentos no Mar Vermelho.
+        </p>
+        <span class="investment-date">
+          12 A 23 DE ABRIL DE 2027
+        </span>
+      </div>
+
+      <div class="investment-grid">
+
+        <article class="investment-card featured">
+          <span class="investment-card-label">
+            ACOMODAÇÃO DUPLA
+          </span>
+          <h3>Quarto duplo</h3>
+          <p class="investment-card-description">
+            Ideal para quem deseja compartilhar
+            a acomodação durante a expedição.
+          </p>
+
+          <div class="investment-price">
+            <span class="investment-currency">US$</span>
+            <strong>2.380</strong>
+          </div>
+          <span class="investment-per-person">
+            VALOR POR PESSOA
+          </span>
+
+          <div class="investment-divider"></div>
+
+          <div class="investment-benefits">
+            <span>✓ Hospedagens previstas no roteiro</span>
+            <span>✓ Cruzeiro pelo Rio Nilo</span>
+            <span>✓ Resort all inclusive em Hurghada</span>
+            <span>✓ Guia em português</span>
+            <span>✓ Transporte e visitas incluídas</span>
+          </div>
+
+          <a href="#contato" class="investment-button">
+            TENHO INTERESSE
+            <span>→</span>
+          </a>
+        </article>
+
+        <article class="investment-card">
+          <span class="investment-card-label">
+            ACOMODAÇÃO INDIVIDUAL
+          </span>
+          <h3>Quarto individual</h3>
+          <p class="investment-card-description">
+            Para quem prefere mais privacidade
+            durante as hospedagens da viagem.
+          </p>
+
+          <div class="investment-price">
+            <span class="investment-currency">US$</span>
+            <strong>2.810</strong>
+          </div>
+          <span class="investment-per-person">
+            VALOR POR PESSOA
+          </span>
+
+          <div class="investment-divider"></div>
+
+          <div class="investment-benefits">
+            <span>✓ Hospedagens previstas no roteiro</span>
+            <span>✓ Cruzeiro pelo Rio Nilo</span>
+            <span>✓ Resort all inclusive em Hurghada</span>
+            <span>✓ Guia em português</span>
+            <span>✓ Transporte e visitas incluídas</span>
+          </div>
+
+          <a href="#contato" class="investment-button outline">
+            TENHO INTERESSE
+            <span>→</span>
+          </a>
+        </article>
+
+      </div>
+
+      <div class="investment-payment">
+        <div class="payment-heading">
+          <span class="eyebrow">PLANEJE SUA VIAGEM</span>
+          <h3>CONDIÇÕES DE PAGAMENTO</h3>
+          <p>
+            A apresentação comercial prevê duas
+            parcelas iniciais e diferentes opções
+            para quitar o saldo restante.
+          </p>
+        </div>
+
+        <div class="payment-steps">
+
+          <div class="payment-step">
+            <span class="payment-number">01</span>
+            <div>
+              <h4>Primeira parcela</h4>
+              <strong>US$ 350</strong>
+              <p>Entrada para a reserva.</p>
+            </div>
+          </div>
+
+          <div class="payment-step">
+            <span class="payment-number">02</span>
+            <div>
+              <h4>Segunda parcela</h4>
+              <strong>US$ 350</strong>
+              <p>Pagamento após 30 dias.</p>
+            </div>
+          </div>
+
+          <div class="payment-step">
+            <span class="payment-number">03</span>
+            <div>
+              <h4>Saldo restante</h4>
+              <strong>Conforme a opção escolhida</strong>
+              <p>
+                Quitação por uma das modalidades
+                previstas na apresentação comercial.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="payment-options">
+          <h4>COMO QUITAR O SALDO RESTANTE?</h4>
+
+          <div class="payment-options-grid">
+
+            <div class="payment-option">
+              <span>01</span>
+              <h5>Dinheiro no Cairo</h5>
+              <p>
+                Pagamento do saldo em dinheiro
+                na chegada ao Cairo.
+              </p>
+            </div>
+
+            <div class="payment-option">
+              <span>02</span>
+              <h5>Cartão de crédito</h5>
+              <p>
+                Pagamento na chegada ao Cairo,
+                com acréscimo de 3%.
+              </p>
+            </div>
+
+            <div class="payment-option">
+              <span>03</span>
+              <h5>Transferência internacional</h5>
+              <p>
+                Pagamento até dez dias
+                antes da viagem.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="investment-notice">
+        <p>
+          Valores em dólares americanos, por pessoa.
+          A conversão para reais segue a cotação
+          do dólar turismo na data do pagamento.
+          Voos internacionais, visto e passeios
+          opcionais não estão incluídos.
+          Consulte as condições comerciais completas.
+        </p>
+      </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- =========================================
+       08. ORGANIZAÇÃO
+  ========================================= -->
 
+  <section class="organizer-section" id="organizacao">
 
-<!-- =========================================
-     DÚVIDAS FREQUENTES
-========================================= -->
+    <div class="organizer-container">
 
-<section class="faq-section" id="duvidas">
+      <div class="organizer-content">
+        <span class="eyebrow">
+          SUA VIAGEM PELO EGITO
+        </span>
 
-  <div class="faq-container">
+        <h2>
+          UMA EXPERIÊNCIA
+          <span>BEM PLANEJADA</span>
+        </h2>
 
-    <div class="faq-heading">
-      <span class="eyebrow">PERGUNTAS FREQUENTES</span>
+        <p>
+          A Expedição Egito 2027 foi pensada para
+          proporcionar uma jornada por alguns dos
+          lugares mais fascinantes do mundo.
+        </p>
+
+        <p>
+          Uma viagem em grupo que reúne história,
+          cultura e experiências inesquecíveis,
+          passando pelo Cairo, pelas Pirâmides de Gizé,
+          pelo Rio Nilo, por Luxor e pelas paisagens
+          do Mar Vermelho.
+        </p>
+
+        <p>
+          A programação conta com serviços turísticos
+          organizados, hospedagens, transportes
+          e acompanhamento em português,
+          conforme a apresentação comercial.
+        </p>
+
+        <div class="organizer-info">
+          <span>AGÊNCIA ORGANIZADORA</span>
+          <strong>Maktub Travel</strong>
+          <p>
+            Agência parceira na organização
+            da Expedição Egito 2027, conforme
+            a apresentação comercial.
+          </p>
+        </div>
+
+        <a href="#contato" class="organizer-button">
+          QUERO SABER MAIS
+          <span>→</span>
+        </a>
+      </div>
+
+      <div class="organizer-image">
+        <img
+          src="https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=1200&q=85"
+          alt="Pirâmides de Gizé, no Egito"
+          loading="lazy"
+        />
+        <div class="organizer-image-overlay"></div>
+        <span>
+          SUA HISTÓRIA PELO EGITO COMEÇA AQUI
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================
+       09. PERGUNTAS FREQUENTES
+  ========================================= -->
+
+  <section class="faq-section" id="duvidas">
+
+    <div class="faq-container">
+
+      <div class="faq-heading">
+        <span class="eyebrow">PERGUNTAS FREQUENTES</span>
+        <h2>
+          AINDA TEM
+          <span>ALGUMA DÚVIDA?</span>
+        </h2>
+        <p>
+          Confira as principais informações
+          sobre a Expedição Egito 2027.
+        </p>
+      </div>
+
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>
+            Quando acontecerá a Expedição Egito 2027?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            A expedição está anunciada para
+            12 a 23 de abril de 2027.
+            A programação detalhada e as datas
+            dos deslocamentos deverão ser confirmadas
+            com a organização.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Quais lugares vamos conhecer?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            A programação inclui Cairo, Pirâmides
+            de Gizé, Esfinge, Grande Museu Egípcio,
+            Aswan, cruzeiro pelo Rio Nilo,
+            templos de Luxor e Karnak, Vale dos Reis
+            e Hurghada, no Mar Vermelho.
+            Também existem atividades opcionais.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            As passagens aéreas estão incluídas?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            As passagens internacionais entre
+            o Brasil e o Egito não estão incluídas.
+            O pacote prevê voo doméstico entre
+            Cairo e Aswan, conforme a apresentação
+            comercial.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Quanto custa participar da expedição?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            Conforme a apresentação comercial,
+            o investimento é de US$ 2.380 por pessoa
+            em quarto duplo ou US$ 2.810 por pessoa
+            em quarto individual. A conversão para
+            reais depende da cotação do dólar turismo.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Quais são as formas de pagamento?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            A apresentação comercial prevê uma
+            primeira parcela de US$ 350 e uma
+            segunda parcela de US$ 350 após 30 dias.
+            O saldo restante poderá ser pago em
+            dinheiro na chegada ao Cairo, com cartão
+            de crédito na chegada e acréscimo de 3%,
+            ou por transferência internacional até
+            dez dias antes da viagem.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Preciso de passaporte e visto?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            É necessário verificar os requisitos
+            de passaporte, visto e demais documentos
+            conforme sua nacionalidade. O material
+            comercial prevê assistência nos
+            procedimentos de chegada, mas a taxa
+            do visto, informada em US$ 30,
+            não está incluída. Consulte os
+            requisitos oficiais antes de viajar.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Preciso falar inglês para participar?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            Não é necessário falar inglês para
+            acompanhar as visitas programadas,
+            que contam com guia egiptólogo
+            que fala português.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Como serão as hospedagens?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            A programação prevê hospedagens
+            em hotéis, cruzeiro pelo Rio Nilo
+            e resort all inclusive em Hurghada.
+            A acomodação poderá ser dupla
+            ou individual, conforme a opção contratada.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            As refeições estão incluídas?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            Estão previstos os cafés da manhã
+            e as refeições indicadas no roteiro.
+            Em Hurghada, a programação inclui
+            resort all inclusive. Refeições
+            e bebidas fora do programa
+            são despesas adicionais.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Existem passeios opcionais?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            Sim. São opcionais os passeios
+            a Saqqara, Vila Núbia, Abu Simbel,
+            o passeio de balão e o passeio de barco
+            no Mar Vermelho, com Ilhas Giftun
+            e snorkel. Não estão incluídos
+            no valor básico do pacote.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Posso viajar sozinho?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            Sim. A apresentação comercial
+            oferece opção de quarto individual
+            por US$ 2.810. O quarto duplo custa
+            US$ 2.380 por pessoa. Consulte
+            as condições de acomodação.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Como faço para reservar minha vaga?
+            <span class="faq-icon">+</span>
+          </summary>
+          <div class="faq-answer">
+            Entre em contato pelo botão de WhatsApp
+            disponível ao final desta página.
+            O atendimento poderá informar sobre
+            disponibilidade, condições comerciais
+            e procedimentos de contratação.
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       10. CONTATO / WHATSAPP
+  ========================================= -->
+
+  <section class="contact-section-new" id="contato">
+
+    <div class="contact-background"></div>
+
+    <div class="contact-container">
+
+      <span class="eyebrow">
+        SUA PRÓXIMA HISTÓRIA COMEÇA AQUI
+      </span>
 
       <h2>
-        AINDA TEM
-        <span>ALGUMA DÚVIDA?</span>
+        O EGITO ESTÁ
+        <span>ESPERANDO POR VOCÊ</span>
       </h2>
 
       <p>
-        Reunimos algumas informações para ajudar
-        você a planejar sua viagem.
+        Pirâmides monumentais, templos milenares,
+        um cruzeiro pelo Rio Nilo e as paisagens
+        inesquecíveis do Mar Vermelho.
       </p>
+
+      <div class="contact-action">
+
+        @if (whatsappUrl(); as url) {
+
+          <a
+            class="contact-whatsapp"
+            [href]="url"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Solicitar informações sobre a Expedição Egito 2027 pelo WhatsApp"
+          >
+            FALAR SOBRE A EXPEDIÇÃO
+            <span>→</span>
+          </a>
+
+        } @else {
+
+          <span class="contact-pending">
+            Canal de atendimento em configuração
+          </span>
+
+        }
+
+      </div>
+
+      <p class="contact-small">
+        Solicite informações comerciais,
+        condições de pagamento e disponibilidade
+        para a Expedição Egito 2027.
+      </p>
+
     </div>
+  </section>
 
-    <div class="faq-list">
+  <!-- =========================================
+       11. RODAPÉ
+  ========================================= -->
 
-      <details class="faq-item">
-        <summary>
-          Quando acontecerá a próxima expedição?
-          <span class="faq-icon">+</span>
-        </summary>
-        <div class="faq-answer">
-          As datas serão divulgadas após
-          confirmação com a agência organizadora.
+  <footer class="site-footer">
+
+    <div class="footer-container">
+
+      <a href="#inicio" class="footer-brand">
+        <span>△</span>
+        <div>
+          EXPEDIÇÃO
+          <strong>EGITO</strong>
         </div>
-      </details>
+      </a>
 
-      <details class="faq-item">
-        <summary>
-          Quantos dias dura a viagem?
-          <span class="faq-icon">+</span>
-        </summary>
-        <div class="faq-answer">
-          O roteiro apresentado prevê 9 dias e
-          8 noites, com visitas ao Cairo, Gizé,
-          Luxor e Aswan.
-        </div>
-      </details>
+      <nav
+        class="footer-navigation"
+        aria-label="Navegação do rodapé"
+      >
+        <a href="#inicio">Início</a>
+        <a href="#destinos">Destinos</a>
+        <a href="#roteiro">Roteiro</a>
+        <a href="#experiencias">Experiências</a>
+        <a href="#investimento">Investimento</a>
+        <a href="#organizacao">Organização</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
 
-      <details class="faq-item">
-        <summary>
-          As passagens aéreas estão incluídas?
-          <span class="faq-icon">+</span>
-        </summary>
-        <div class="faq-answer">
-          A inclusão de passagens internacionais
-          e domésticas deverá ser confirmada
-          nas condições oficiais do pacote.
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>
-          Preciso de passaporte e visto?
-          <span class="faq-icon">+</span>
-        </summary>
-        <div class="faq-answer">
-          Para viajar ao Egito, é necessário
-          verificar os requisitos de passaporte,
-          visto e demais documentos aplicáveis
-          à sua nacionalidade e à data da viagem.
-          Consulte as fontes oficiais.
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>
-          Posso viajar sozinho?
-          <span class="faq-icon">+</span>
-        </summary>
-        <div class="faq-answer">
-          Você pode consultar a possibilidade
-          de viajar individualmente e as opções
-          de acomodação com a equipe comercial.
-        </div>
-      </details>
-
-      <details class="faq-item">
-        <summary>
-          Como posso reservar minha vaga?
-          <span class="faq-icon">+</span>
-        </summary>
-        <div class="faq-answer">
-          O atendimento comercial informará
-          a disponibilidade, os valores,
-          as condições de pagamento e o
-          procedimento oficial de reserva.
-        </div>
-      </details>
+      <p>
+        Muito mais que uma viagem.
+        Uma jornada pela história.
+      </p>
 
     </div>
 
-  </div>
-</section>
-
-
-<!-- =========================================
-     CHAMADA FINAL PARA CONTATO
-========================================= -->
-
-<section class="contact-section-new" id="contato">
-
-  <div class="contact-background"></div>
-
-  <div class="contact-container">
-
-    <span class="eyebrow">SUA PRÓXIMA HISTÓRIA COMEÇA AQUI</span>
-
-    <h2>
-      O EGITO ESTÁ
-      <span>ESPERANDO POR VOCÊ</span>
-    </h2>
-
-    <p>
-      Pirâmides monumentais, templos milenares,
-      paisagens inesquecíveis e uma viagem
-      que pode transformar sua maneira de ver o mundo.
-    </p>
-
-    <div class="contact-action">
-      <span class="contact-pending">
-        Canal de atendimento em configuração
+    <div class="footer-bottom">
+      <span>© Expedição Egito 2027</span>
+      <span>
+        Consulte as condições da apresentação comercial.
       </span>
     </div>
 
-    <p class="contact-small">
-      Em breve, você poderá solicitar diretamente
-      as informações comerciais desta expedição.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================
-     RODAPÉ
-========================================= -->
-
-<footer class="site-footer">
-
-  <div class="footer-container">
-
-    <a href="#inicio" class="footer-brand">
-      <span>△</span>
-      <div>
-        EXPEDIÇÃO
-        <strong>EGITO</strong>
-      </div>
-    </a>
-
-    <nav class="footer-navigation" aria-label="Navegação do rodapé">
-      <a href="#inicio">Início</a>
-      <a href="#destinos">Destinos</a>
-      <a href="#roteiro">Roteiro</a>
-      <a href="#experiencias">Experiências</a>
-      <a href="#duvidas">Dúvidas</a>
-    </nav>
-
-    <p>
-      Muito mais que uma viagem.
-      Uma jornada pela história.
-    </p>
-
-  </div>
-
-  <div class="footer-bottom">
-    <span>© Expedição Egito</span>
-    <span>
-      Informações comerciais sujeitas à confirmação.
-    </span>
-  </div>
-
-</footer>
+  </footer>
 
 </main>
